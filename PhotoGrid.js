@@ -96,7 +96,7 @@ class PhotoGrid extends PureComponent {
                         }}>
                             {secondViewImages.map((image, index) => (
                                 <TouchableOpacity activeOpacity={0.7} key={index} style={{flex: 1}}
-                                                  onPress={event => this.handlePressImage(index)}>
+                                                  onPress={event => this.handlePressImage(index + firstViewImages.length)}>
                                     {this.isLastImage(index, secondViewImages) ? (
                                             <ImageBackground
                                                 style={[styles.image, {
